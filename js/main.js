@@ -1,6 +1,6 @@
 const AOS = require('aos');
 const jQuery = require('jquery');
-require('animsition');
+// require('animsition');
 require('popper.js');
 require('scrollax');
 require('bootstrap');
@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 
   
   // Animsition
-  $(".animsition").animsition();
+  // $(".animsition").animsition();
   
   // Scrollax
   $.Scrollax();
