@@ -6,7 +6,7 @@
 // @import "../node_modules/animsition/dist/css/animsition.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 
-$primary: #dc3545;
+$primary: #d5b036;
 
 body {
 	font-size: 16px;
@@ -82,16 +82,10 @@ a {
 						height: 2px;
 						width: 0;
 						left: 0;
-						background: $red;
+						background: $primary;
 						transition: .15s width ease;
 					}
 					
-					&:hover {
-						&:before {
-							width: 100%;
-						}
-						
-					}
 				}
 				&.active {
 					> a {
@@ -554,7 +548,7 @@ textarea.form-control {
     content: "";
     display: block;
     position: absolute;
-    background: $red;
+    background: $primary;
     left: 50%;
     transform: translateX(-50%);
     pointer-events: none;
@@ -573,7 +567,7 @@ textarea.form-control {
 		width: 0;
 		margin-left: -1px;
 		position: absolute;
-		border-top-color: $red;
+		border-top-color: $primary;
 		border-width: 7px;
 		margin-left: -7px;
 	}
