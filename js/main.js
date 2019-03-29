@@ -1,3 +1,10 @@
+const AOS = require('aos');
+const jQuery = require('jquery');
+require('animsition');
+require('popper.js');
+require('scrollax');
+require('bootstrap');
+
 // AOS
 AOS.init({
   duration: 1000,
@@ -22,34 +29,6 @@ jQuery(document).ready(function($){
     }, 500);
 
     return false;
-  });
-
-  // Owl
-  $('.wide-slider').owlCarousel({
-    loop:true,
-    autoplay: true,
-    margin:10,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
-    nav:true,
-    autoplayHoverPause: false,
-    items: 1,
-    autoheight: true,
-    navText : ["<span class='ion-chevron-left'></span>","<span class='ion-chevron-right'></span>"],
-    responsive:{
-      0:{
-        items:1,
-        nav:false
-      },
-      600:{
-        items:1,
-        nav:false
-      },
-      1000:{
-        items:1,
-        nav:true
-      }
-    }
   });
 
   // Show menu 
