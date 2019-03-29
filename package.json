@@ -1,0 +1,33 @@
+{
+  "name": "hannahhamm-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Hannah Hamm",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "clean": "rimraf dist",
+    "build": "npm run clean && parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esingletary/hannahhamm-com.git"
+  },
+  "homepage": "https://github.com/esingletary/hannahhamm-com#readme",
+  "dependencies": {
+    "animsition": "^4.0.2",
+    "aos": "^3.0.0-beta.6",
+    "bootstrap": "^4.3.1",
+    "hamburgers": "^1.1.3",
+    "jquery": "^3.3.1",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.14.7",
+    "scrollax": "^1.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.3",
+    "rimraf": "^2.6.3",
+    "sass": "^1.17.3"
+  }
+}

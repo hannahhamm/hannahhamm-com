@@ -1,6 +1,12 @@
-@import "functions";
-@import "variables";
-@import "mixins";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/aos/src/sass/aos.scss";
+@import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+@import "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
+@import "../fonts/icomoon/style.css";
+@import "../node_modules/animsition/dist/css/animsition.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+$primary: #dc3545;
 
 body {
 	font-size: 16px;
