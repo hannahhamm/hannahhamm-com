@@ -3,7 +3,7 @@
 @import "../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 @import "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
 @import "../fonts/icomoon/style.css";
-// @import "../node_modules/animsition/dist/css/animsition.min.css";
+@import "../node_modules/lightgallery/dist/css/lightgallery.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 
 $primary: #d5b036;
@@ -13,6 +13,14 @@ body {
 	line-height: 1.8;
 	color: gray('600');
 	font-family: $font-family-sans-serif;
+}
+
+.scoot {
+	margin-bottom: 80px;
+}
+
+.logo {
+	width: 50px;
 }
 
 ::-moz-selection { background: yellow; }
@@ -34,12 +42,12 @@ a {
 	left: 0;
 	width: 100%;
 	padding: 35px 0;
-	z-index: 99999;
+	z-index: 999;
 	.container-fluid {
 		max-width: 100%;
 	}
 	.toggle-menu {
-		z-index: 9999;	
+		z-index: 999;	
 		position: relative;
 		top: -13px;
 		display: none;
@@ -53,7 +61,7 @@ a {
 	.site-logo {
 		position: relative;
 		top: -10px;
-		z-index: 9999;
+		z-index: 999;
 		a {
 			font-size: 30px;
 			color: $black;
