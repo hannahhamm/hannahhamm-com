@@ -1,84 +1,132 @@
 const AOS = require('aos');
 const jQuery = require('jquery');
-// require('animsition');
 require('popper.js');
 require('scrollax');
 require('bootstrap');
+require('lightgallery');
+require('lg-zoom');
 
 // AOS
 AOS.init({
   duration: 1000,
 })
 
-jQuery(document).ready(function($){
+jQuery(document).ready(function ($) {
   'use strict';
 
-  
-  // Animsition
-  // $(".animsition").animsition();
-  
   // Scrollax
   $.Scrollax();
 
   // Smooth scroll
   var $root = $('html, body');
 
+  $('.gallery1').on('click', function () {
+    $(this).lightGallery({
+      dynamic: true,
+      dynamicEl: [{
+        "src": require('../images/img_1_large.jpg'),
+        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+      }]
+    })
+  });
+
+  $('.gallery2').on('click', function () {
+    $(this).lightGallery({
+      dynamic: true,
+      dynamicEl: [{
+        "src": require('../images/img_2.jpg'),
+        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+      }]
+    })
+  });
+
+  $('.gallery3').on('click', function () {
+    $(this).lightGallery({
+      dynamic: true,
+      dynamicEl: [{
+        "src": require('../images/img_3.jpg'),
+        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+      }]
+    })
+  });
+
+  $('.gallery4').on('click', function () {
+    $(this).lightGallery({
+      dynamic: true,
+      dynamicEl: [{
+        "src": require('../images/img_4.jpg'),
+        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+      }]
+    })
+  });
+
+  $('.gallery5').on('click', function () {
+    $(this).lightGallery({
+      dynamic: true,
+      dynamicEl: [{
+        "src": require('../images/img_5.jpg'),
+        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
+      }]
+    })
+  });
+
   $('a.js-smoothscroll[href^="#"]').click(function () {
     $root.animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top - 40
+      scrollTop: $($.attr(this, 'href')).offset().top - 40
     }, 500);
 
     return false;
   });
 
+
   // Show menu 
-  if ($(window).width() > 768 ) {
+  if ($(window).width() > 768) {
     $('body').removeClass('menu-open');
     $('.js-templateux-menu').css('display', 'block');
   }
   // Window Resize
-  $(window).resize(function(){
+  $(window).resize(function () {
     var $this = $(this);
     $('.js-templateux-menu li').removeClass('staggard');
     $('.js-toggle-menu').removeClass('is-active');
-    if ($this.width() > 768 ) {
+    if ($this.width() > 768) {
       $('body').removeClass('menu-open');
       $('.js-templateux-menu').css('display', 'block');
-      
+
     } else {
-      if ($this.width() < 768 ) {
+      if ($this.width() < 768) {
         $('.js-templateux-menu').css('display', 'none');
       }
     }
   });
 
   // Hamburger Button 
-  $('.js-toggle-menu').on('click', function(e){
-  	e.preventDefault();
-  	
+  $('.js-toggle-menu').on('click', function (e) {
+    e.preventDefault();
+
     var $this = $(this);
 
     if ($('body').hasClass('menu-open')) {
       $this.removeClass('is-active');
-      $('body').removeClass('menu-open');  
+      $('body').removeClass('menu-open');
       $('.js-templateux-menu li').removeClass('staggard');
     } else {
       $this.addClass('is-active');
-      $('body').addClass('menu-open');  
+      $('body').addClass('menu-open');
 
-      $('.js-templateux-menu li').each(function(k){
+      $('.js-templateux-menu li').each(function (k) {
         var $this = $(this);
-        setTimeout(function(){
+        setTimeout(function () {
           $this.addClass('staggard');
-        }, 100 * k );
+        }, 100 * k);
       });
 
     }
 
-  	if ( $('.templateux-menu').is(':visible') ) {
-  		$('.js-templateux-menu').fadeOut(300);
-  	} else {
-  		$('.js-templateux-menu').fadeIn(300);
-  	}
+    if ($('.templateux-menu').is(':visible')) {
+      $('.js-templateux-menu').fadeOut(300);
+    } else {
+      $('.js-templateux-menu').fadeIn(300);
+    }
   })
 });
