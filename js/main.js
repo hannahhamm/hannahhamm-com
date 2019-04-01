@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     $(this).lightGallery({
       dynamic: true,
       dynamicEl: [{
-        "src": require('../images/img_1_large.jpg'),
+        "src": require('../images/img_1.jpg'),
         'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
       }]
     })
