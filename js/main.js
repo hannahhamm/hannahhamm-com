@@ -20,113 +20,143 @@ jQuery(document).ready(function ($) {
   // Smooth scroll
   var $root = $('html, body');
 
-  $('.gallery1').on('click', function () {
+  $('.childrens-book').on('click', function () {
     $(this).lightGallery({
       dynamic: true,
-      dynamicEl: [{
-        "src": require('../images/img_1.jpg'),
-        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
-      }]
-    })
+      dynamicEl: [
+        {
+          "src": require('../images/childrens/childrenscover.png')
+        },
+        {
+          "src": require('../images/childrens/childrens1.png')
+        },
+        {
+          "src": require('../images/childrens/childrens2.png')
+        },
+        {
+          "src": require('../images/childrens/childrens3.png')
+        },
+        {
+          "src": require('../images/childrens/childrens4.png')
+        },
+        {
+          "src": require('../images/childrens/childrens5.png')
+        }]
+    });
   });
 
-  $('.gallery2').on('click', function () {
+  $('.selftour').on('click', function () {
     $(this).lightGallery({
       dynamic: true,
-      dynamicEl: [{
-        "src": require('../images/img_2.jpg'),
-        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
-      }]
-    })
+      dynamicEl: [
+        {
+          "src": require('../images/selftour/selftour1.png')
+        },
+        {
+          "src": require('../images/selftour/selftour2.png')
+        },
+        {
+          "src": require('../images/selftour/selftour3.png')
+        }]
+    });
   });
 
-  $('.gallery3').on('click', function () {
+  $('.autobio').on('click', function () {
     $(this).lightGallery({
       dynamic: true,
-      dynamicEl: [{
-        "src": require('../images/img_3.jpg'),
-        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
-      }]
-    })
+      dynamicEl: [
+        {
+          "src": require('../images/auto/automockup.png')
+        },
+        {
+          "src": require('../images/auto/auto.png')
+        }]
+    });
   });
 
-  $('.gallery4').on('click', function () {
+  $('.typportrait').on('click', function () {
     $(this).lightGallery({
       dynamic: true,
-      dynamicEl: [{
-        "src": require('../images/img_4.jpg'),
-        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
-      }]
-    })
+      dynamicEl: [
+        {
+          "src": require('../images/typportrait/portrait.png')
+        }]
+    });
   });
 
-  $('.gallery5').on('click', function () {
+  $('.cause').on('click', function () {
     $(this).lightGallery({
       dynamic: true,
-      dynamicEl: [{
-        "src": require('../images/img_5.jpg'),
-        'subHtml': '<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>'
-      }]
-    })
+      dynamicEl: [
+        {
+          "src": require('../images/cause/cause1.png')
+        },
+        {
+          "src": require('../images/cause/cause2.png')
+        },
+        {
+          "src": require('../images/cause/cause3.png')
+        }]
+    });
   });
 
-  $('a.js-smoothscroll[href^="#"]').click(function () {
-    $root.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 40
-    }, 500);
+    $('a.js-smoothscroll[href^="#"]').click(function () {
+      $root.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 40
+      }, 500);
 
-    return false;
-  });
+      return false;
+    });
 
 
-  // Show menu 
-  if ($(window).width() > 768) {
-    $('body').removeClass('menu-open');
-    $('.js-templateux-menu').css('display', 'block');
-  }
-  // Window Resize
-  $(window).resize(function () {
-    var $this = $(this);
-    $('.js-templateux-menu li').removeClass('staggard');
-    $('.js-toggle-menu').removeClass('is-active');
-    if ($this.width() > 768) {
+    // Show menu 
+    if ($(window).width() > 768) {
       $('body').removeClass('menu-open');
       $('.js-templateux-menu').css('display', 'block');
-
-    } else {
-      if ($this.width() < 768) {
-        $('.js-templateux-menu').css('display', 'none');
-      }
     }
-  });
-
-  // Hamburger Button 
-  $('.js-toggle-menu').on('click', function (e) {
-    e.preventDefault();
-
-    var $this = $(this);
-
-    if ($('body').hasClass('menu-open')) {
-      $this.removeClass('is-active');
-      $('body').removeClass('menu-open');
+    // Window Resize
+    $(window).resize(function () {
+      var $this = $(this);
       $('.js-templateux-menu li').removeClass('staggard');
-    } else {
-      $this.addClass('is-active');
-      $('body').addClass('menu-open');
+      $('.js-toggle-menu').removeClass('is-active');
+      if ($this.width() > 768) {
+        $('body').removeClass('menu-open');
+        $('.js-templateux-menu').css('display', 'block');
 
-      $('.js-templateux-menu li').each(function (k) {
-        var $this = $(this);
-        setTimeout(function () {
-          $this.addClass('staggard');
-        }, 100 * k);
-      });
+      } else {
+        if ($this.width() < 768) {
+          $('.js-templateux-menu').css('display', 'none');
+        }
+      }
+    });
 
-    }
+    // Hamburger Button 
+    $('.js-toggle-menu').on('click', function (e) {
+      e.preventDefault();
 
-    if ($('.templateux-menu').is(':visible')) {
-      $('.js-templateux-menu').fadeOut(300);
-    } else {
-      $('.js-templateux-menu').fadeIn(300);
-    }
-  })
-});
+      var $this = $(this);
+
+      if ($('body').hasClass('menu-open')) {
+        $this.removeClass('is-active');
+        $('body').removeClass('menu-open');
+        $('.js-templateux-menu li').removeClass('staggard');
+      } else {
+        $this.addClass('is-active');
+        $('body').addClass('menu-open');
+
+        $('.js-templateux-menu li').each(function (k) {
+          var $this = $(this);
+          setTimeout(function () {
+            $this.addClass('staggard');
+          }, 100 * k);
+        });
+
+      }
+
+      if ($('.templateux-menu').is(':visible')) {
+        $('.js-templateux-menu').fadeOut(300);
+      } else {
+        $('.js-templateux-menu').fadeIn(300);
+      }
+    })
+  });
