@@ -536,12 +536,12 @@ textarea.form-control {
 		outline: none;
 	}
 	&.button--red {
-		background: $red;
+		background: $primary;
 		&:hover {
 			text-decoration: none;
 			color: $white;
 			box-shadow: 0 20px 40px -5px rgba(0,0,0,.4);
-			background: darken($red, 5%);
+			background: darken($primary, 5%);
 		}
 	}
 }
